@@ -15,3 +15,18 @@ Duration
 
 # Lab Environment
 An AWS Workshop Studio environment will be provisioned as part of the workshop and can only be accessed for the duration of the event. By using the workshop account for the relevant event, you agree to the AWS Event Terms and Conditions  and the AWS Acceptable Use Policy .
+
+# Getting Started
+
+# Overview
+In preparation for the workshop, we have created Amazon S3 buckets, copied sample data files to Amazon S3, and created an IAM service role.
+
+#Solution Diagram
+
+# What is a data lake?
+A data lake is a centralized repository that allows you to store all your structured and unstructured data at any scale. You can store your data as-is, without having to first structure the data, and run different types of analytics—from dashboards and visualizations to big data processing, real-time analytics, and machine learning to guide better decisions.
+
+# Introducing Amazon S3
+Amazon Simple Storage Service (S3) is the largest and most performant object storage service for structured and unstructured data and the storage service of choice to build a data lake. With Amazon S3, you can cost-effectively build and scale a data lake of any size in a secure environment where data is protected by 99.999999999% (11 9s) of durability.
+
+With data lakes built on Amazon S3, you can use native AWS services to run big data analytics, artificial intelligence (AI) and Machine Learning (ML) to gain insights from your unstructured data sets. Data can be collected from multiple sources and moved into the data lake in its original format. It can be accessed or processed with your choice of purpose-built AWS analytics tools and frameworks. Making it easy and quick to run analytics without the need to move your data to a separate analytics system.
