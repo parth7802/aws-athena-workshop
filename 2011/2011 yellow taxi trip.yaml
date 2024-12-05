@@ -256,3 +256,4 @@ Outputs:
     Value: !Join ['', ["s3://", !Ref TransformedS3Bucket]]
   AthenaBucketPath:
     Value: !Join ['', ["s3://", !Ref AthenaS3Bucket]]
+
