@@ -225,6 +225,7 @@ Resources:
           !Sub 
             - |
               #!/bin/bash -x
+
               echo "Script starts at: `date`"
 
               aws s3 cp s3://datapipeline-dataset-yellow-taxi-1/2011/2011.csv s3://${RAWBUCKETNAME}/nyc-taxi/yellow-tripdata/
@@ -256,3 +257,8 @@ Outputs:
     Value: !Join ['', ["s3://", !Ref TransformedS3Bucket]]
   AthenaBucketPath:
     Value: !Join ['', ["s3://", !Ref AthenaS3Bucket]]
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/main
