@@ -1,4 +1,3 @@
-#2021_yellow_taxi_trip_data.yaml
 # Copyright 2022 Amazon.com and its affiliates; all rights reserved. 
 # This file is Amazon Web Services Content and may not be duplicated or distributed without permission.
 AWSTemplateFormatVersion: "2010-09-09"
@@ -228,8 +227,9 @@ Resources:
               #!/bin/bash -x
               echo "Script starts at: `date`"
 
-	      aws s3 cp s3://datapipeline-dataset-yellow-taxi-1/2021/2021.csv s3://${RAWBUCKETNAME}/nyc-taxi/yellow-tripdata/
-                            
+              aws s3 cp s3://datapipeline-dataset-yellow-taxi-1/2021/2021.csv s3://${RAWBUCKETNAME}/nyc-taxi/yellow-tripdata/
+              
+              
               aws s3 cp s3://ws-assets-prod-iad-r-sfo-f61fc67057535f1b/276faf92-bffc-4843-8a8e-8078add48194/taxi_zone_lookup.csv s3://${RAWBUCKETNAME}/nyc-taxi/taxi_zone_lookup/taxi_zone_lookup.csv
 
               /opt/aws/bin/cfn-signal -e 0 --stack ${AWS::StackName} --region ${AWS::Region} --resource WaitCondition
@@ -256,5 +256,3 @@ Outputs:
     Value: !Join ['', ["s3://", !Ref TransformedS3Bucket]]
   AthenaBucketPath:
     Value: !Join ['', ["s3://", !Ref AthenaS3Bucket]]
-
-
